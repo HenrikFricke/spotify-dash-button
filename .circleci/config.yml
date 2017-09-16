@@ -24,5 +24,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      # deploy stack
-      - run: yarn run deploy
+      - deploy:
+        name: Deploy Serverless Stack
+        command: |
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            yarn run deploy
+          fi
