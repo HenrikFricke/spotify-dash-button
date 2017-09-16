@@ -16,13 +16,13 @@ I wanted to play around with the AWS IoT platform to learn more about the concep
 6. Run `curl -X POST 'https://accounts.spotify.com/api/token' -d 'grant_type=authorization_code' -d 'code=<-- YOUR CODE HERE -->' -d 'redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F' -H 'Authorization: Basic <-- base64 encoded client_id:client_secret -->'`
 7. You will hopefully get the following response:
     ```json
-        {
-            "access_token":"<-- TOKEN -->",
-            "token_type":"Bearer",
-            "expires_in":3600,
-            "refresh_token":"<-- TOKEN -->",
-            "scope":"user-modify-playback-state user-read-playback-state"
-        }
+    {
+        "access_token":"<-- TOKEN -->",
+        "token_type":"Bearer",
+        "expires_in":3600,
+        "refresh_token":"<-- TOKEN -->",
+        "scope":"user-modify-playback-state user-read-playback-state"
+    }
     ```
 8. Copy the refresh token for later use
 9. Now you can start to configure your IoT Button, please follow the guide [here](https://aws.amazon.com/iotbutton/getting-started/?nc1=h_ls)
