@@ -1,0 +1,20 @@
+{
+  "name": "spotify-dash-button",
+  "description": "Control your Spotify with an AWS IoT Button",
+  "scripts": {
+    "deploy": "sls deploy"
+  },
+  "author": "Henrik Fricke <henrikfricke@web.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenrikFricke/spotify-dash-button.git"
+  },
+  "homepage": "https://github.com/HenrikFricke/spotify-dash-button#readme",
+  "devDependencies": {
+    "serverless": "^1.21.1"
+  },
+  "dependencies": {
+    "spotify-web-api-node": "^2.5.0"
+  }
+}
