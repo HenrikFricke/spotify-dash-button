@@ -15,7 +15,7 @@ functions:
     handler: src/playback.handler
     events:
       - iot:
-          name: "Spotify Dash Button - Play"
+          name: "SpotifyDashButton_Playback"
           sql: "SELECT * FROM 'iotbutton/G030PT0243371VGF' WHERE clickType = 'SINGLE'"
           description: "My IoT Button Rule"
   
@@ -23,6 +23,6 @@ functions:
     handler: src/skip.handler
     events:
       - iot:
-          name: "Spotify Dash Button - Skip"
+          name: "SpotifyDashButton_Skip"
           sql: "SELECT * FROM 'iotbutton/G030PT0243371VGF' WHERE clickType = 'DOUBLE'"
           description: "My IoT Button Rule"
