@@ -12,6 +12,6 @@ module.exports.handler = (event, context, callback) => {
     spotifyApi.refreshAccessToken()
         .then(resp => spotifyApi.setAccessToken(resp.body['access_token']))
         .then(() => spotifyApi.skipToNext())
-        .then(callback)
-        .catch(callback)
+        .then(() => callback(null))
+        .catch((err) => callback(err))
 }
