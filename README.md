@@ -11,7 +11,7 @@ I wanted to play around with the AWS IoT platform to learn more about the concep
 2. Go to [Spotify Developer] and create a new application
 3. Add `http://localhost:8080/` to the list of Redirect URIs (we just need it once for the oAuth flow)
 4. Create your URL to authorize your Spotify account againt the new Application, use this and replace the placeholder with your Client ID:
-    `https://accounts.spotify.com/authorize?client_id=<-- CLIENT ID -->&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F&scope=user-read-playback-state%20user-modify-playback-stat`
+    `https://accounts.spotify.com/authorize?client_id=<-- CLIENT ID -->&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F&scope=user-read-playback-state%20user-modify-playback-state`
 5. After that you will be redirected to `http://localhost:8080/`: The important part here is the code in the URL. Copy that to your clipboard, we will use it in the next step.
 6. Run `curl -X POST 'https://accounts.spotify.com/api/token' -d 'grant_type=authorization_code' -d 'code=<-- YOUR CODE HERE -->' -d 'redirect_uri=http%3A%2F%2Flocalhost%3A8080%2F' -H 'Authorization: Basic <-- base64 encoded client_id:client_secret -->'`
 7. You will hopefully get the following response:
