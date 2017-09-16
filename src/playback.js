@@ -14,5 +14,5 @@ module.exports.handler = (event, context, callback) => {
         .then(() => spotifyApi.getMyCurrentPlaybackState())
         .then(resp => resp.body['is_playing'] ? spotifyApi.pause() : spotifyApi.play())
         .then(() => callback(null))
-        .catch((err) => callback(err))
+        .catch(callback)
 }
